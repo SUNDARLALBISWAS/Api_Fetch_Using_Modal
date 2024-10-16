@@ -1,0 +1,22 @@
+nav{
+    background-color: lightblue;
+    padding: 10px 50px;
+}
+
+.navList ul{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.navList ul li{
+    list-style: none;
+    margin: 0 5px;
+}
+
+.navList ul li a{
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 20px;
+    color: navy;
+}
