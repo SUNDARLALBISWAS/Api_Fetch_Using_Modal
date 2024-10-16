@@ -10,17 +10,16 @@ const Allcoin = () => {
   const [show, setShow] = useState(false);
   const [selectedCoin, setSelectedCoin] = useState(null); // Store selected coin details for the modal
 
-  const getProduct = () => {
-    axios.get(api)
-      .then(result => {
-        setState(result.data.data)
-      })
-      .catch(error => {
-        console.log("Error", error);
-      });
-  }
-
   useEffect(() => {
+    const getProduct = () => {
+      axios.get(api)
+        .then(result => {
+          setState(result.data.data)
+        })
+        .catch(error => {
+          console.log("Error", error);
+        });
+    };
     getProduct();
   }, [api]);
 
