@@ -75,6 +75,7 @@ const Allcoin = () => {
               } else if (item.name.toLowerCase().includes(search.toLowerCase())) {
                 return item;
               }
+              return null;
             }).map((ele, index) => (
               <tr key={index}>
                 <td>{index + 1}</td>
@@ -105,7 +106,7 @@ const Allcoin = () => {
                 <p>Market Cap: {selectedCoin.marketCapUsd}</p>
                 <p>Change (24h): {selectedCoin.changePercent24Hr}%</p>
                 <p>Volumeused (24h) : {selectedCoin.volumeUsd24Hr}</p>
-                <p>Explor (Site) : <a href={selectedCoin.explorer} target='_blank' className="text-decoration-none">visit</a></p>
+                <p>Explor (Site) : <a href={selectedCoin.explorer} target='_blank' rel='noreferrer' className="text-decoration-none">visit</a></p>
               </>
             ) : (
               <p>Loading details...</p>
